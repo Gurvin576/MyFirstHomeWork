@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class HomeWork {
@@ -11,7 +12,7 @@ public class HomeWork {
 
         System.out.println(str2);
 
-        Scanner in = new Scanner(System.in, "ibm866");
+        Scanner in = new Scanner(System.in, StandardCharsets.UTF_8);
         var name = in.nextLine();
 
         System.out.println(str3);
@@ -24,9 +25,9 @@ public class HomeWork {
 // условие чтобы корректно печаталась переменная old (лет, год, года) в зависимости от введенного числа age
         if (ageLastNumber == 1)
             old = " год";
-        else if(ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
+        else if(ageLastNumber == 0 || ageLastNumber >= 5)
             old = " лет";
-        else if(ageLastNumber >= 2 && ageLastNumber <= 4)
+        else if(ageLastNumber >= 2)
             old = " года";
         if (isExclusion)
             old = " лет";

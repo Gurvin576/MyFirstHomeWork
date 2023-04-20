@@ -18,6 +18,7 @@ public class HomeWork {
         System.out.println(str3);
 
         var age = in.nextInt();
+        in.close();
 
         int ageLastNumber = age % 10;
         boolean isExclusion = (age % 100 >= 11) && (age % 100 <= 14);

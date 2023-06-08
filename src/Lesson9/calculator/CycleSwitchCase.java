@@ -29,7 +29,6 @@ public class CycleSwitchCase {
                 if (reader.nextLine().equals(EXIT_COMMAND)) break;
 
             }
- //       }
         for (Double aDouble : massResult) {
             System.out.println(aDouble);
         }

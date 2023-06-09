@@ -39,13 +39,10 @@ class Person {
                 return person;
             } else if (searchString.equals(person.email)) {
                 return person;
-
             }
-
         }
         System.out.println("нет такого человека");
         return null;
-
     }
 
     @Override

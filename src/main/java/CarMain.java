@@ -8,7 +8,7 @@ public class CarMain {
         testTheCar(bmwm3);
     }
 
-    public static void testTheCar(Car car){
+    public static void testTheCar(Car car) {
         System.out.println("Name: " + car.getName() + "\n" +
                 "HP: " + car.getHp() + "\n" +
                 "Weight: " + car.getWeight());

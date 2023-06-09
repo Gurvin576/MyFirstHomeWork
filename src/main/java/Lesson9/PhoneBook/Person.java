@@ -24,13 +24,6 @@ class Person {
         persons[9] = new Person("777777", "123456789", "777777@yandex.com");
     }
 
-    public String toString() {
-        return "\n\nName: " + this.name() + "\nPhone number: " + this.phone() + "\nEmail: " +
-                this.email();
-    }
-
-    // поиск человека
-
     public static Person find(String searchString, Person[] persons) {
         for (Person person : persons) {
             if (person == null) continue;
@@ -45,6 +38,8 @@ class Person {
         System.out.println("нет такого человека");
         return null;
     }
+
+    // поиск человека
 
     public static Person findByName(String searchString, Person[] persons) {
         for (Person person : persons) {
@@ -71,6 +66,11 @@ class Person {
         }
         System.out.println("нет такого человека");
         return null;
+    }
+
+    public String toString() {
+        return "\n\nName: " + this.name() + "\nPhone number: " + this.phone() + "\nEmail: " +
+                this.email();
     }
 
     @Override

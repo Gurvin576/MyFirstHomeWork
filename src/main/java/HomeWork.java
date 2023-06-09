@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class HomeWork {
     public static void main(String[] param) {
         // Назначаем переменные вопросов
-        String str1="Расскажите о вашем друге.";
-        String str2="Как зовут вашего друга?";
-        String str3="Сколько лет вашему другу";
+        String str1 = "Расскажите о вашем друге.";
+        String str2 = "Как зовут вашего друга?";
+        String str3 = "Сколько лет вашему другу";
 
         System.out.println(str1);
 
@@ -26,14 +26,14 @@ public class HomeWork {
 // условие чтобы корректно печаталась переменная old (лет, год, года) в зависимости от введенного числа age
         if (ageLastNumber == 1)
             old = " год";
-        else if(ageLastNumber == 0 || ageLastNumber >= 5)
+        else if (ageLastNumber == 0 || ageLastNumber >= 5)
             old = " лет";
-        else if(ageLastNumber >= 2)
+        else if (ageLastNumber >= 2)
             old = " года";
         if (isExclusion)
             old = " лет";
 
-        System.out.println("Моему другу "+ name + " сейчас "+ age + old);
+        System.out.println("Моему другу " + name + " сейчас " + age + old);
         // System.out.println(""Моему другу сейчас ""+ age + old);
     }
 }

@@ -17,23 +17,30 @@ class PersonTest {
         persons[0] = new Person("Юля", "89210000000", "Julia@yandex.com");
         persons[1] = new Person("Сергей", "777777", "borya@yandex.com");
         persons[2] = new Person("Друган", "23566777", "univer@yandex.com");
+        persons[9] = new Person("777777", "123456789", "777777@yandex.com");
     }
 
     @Test
     void findByNameTest() {
-        Person actual = Person.find("Юля", persons);
-        Assertions.assertEquals(new Person("Юля", "89210000000", "Julia@yandex.com"),actual);
+        Person actual = Person.findByName("777777", persons);
+        Assertions.assertEquals(new Person("777777", "123456789", "777777@yandex.com"),actual);
     }
 
     @Test
     void findByPhoneTest() {
-        Person actual = Person.find("777777", persons);
-        Assertions.assertEquals(new Person("Сергей", "777777", "borya@yandex.com"),actual);
+        Person actual = Person.findByPhone("89210000000", persons);
+        Assertions.assertEquals(new Person("Юля", "89210000000", "Julia@yandex.com"),actual);
     }
     @Test
     void findByEmailTest() {
-        Person actual = Person.find("univer@yandex.com", persons);
+        Person actual = Person.findByEmail("univer@yandex.com", persons);
         Assertions.assertEquals(new Person("Друган", "23566777", "univer@yandex.com"),actual);
+    }
+
+    @Test
+    void findByAnythingTest() {
+        Person actual = Person.find("777777", persons);
+        Assertions.assertEquals(new Person("Сергей", "777777", "borya@yandex.com"),actual);
     }
 
     @Test

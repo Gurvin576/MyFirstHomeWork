@@ -21,6 +21,7 @@ class Person {
         persons[2] = new Person("Друган", "23566777", "univer@yandex.com");
         persons[3] = new Person("EvilBoss", "456546546", "boss@yandex.com");
         persons[4] = new Person("Anna", "+79216661666", "mylove@yandex.com");
+        persons[9] = new Person("777777", "123456789", "777777@yandex.com");
     }
 
     public String toString() {
@@ -40,6 +41,33 @@ class Person {
             } else if (searchString.equals(person.email)) {
                 return person;
             }
+        }
+        System.out.println("нет такого человека");
+        return null;
+    }
+
+    public static Person findByName(String searchString, Person[] persons) {
+        for (Person person : persons) {
+            if (person == null) continue;
+            if (searchString.equals(person.name)) return person;
+        }
+        System.out.println("нет такого человека");
+        return null;
+    }
+
+    public static Person findByPhone(String searchString, Person[] persons) {
+        for (Person person : persons) {
+            if (person == null) continue;
+            if (searchString.equals(person.phone)) return person;
+        }
+        System.out.println("нет такого человека");
+        return null;
+    }
+
+    public static Person findByEmail(String searchString, Person[] persons) {
+        for (Person person : persons) {
+            if (person == null) continue;
+            if (searchString.equals(person.email)) return person;
         }
         System.out.println("нет такого человека");
         return null;

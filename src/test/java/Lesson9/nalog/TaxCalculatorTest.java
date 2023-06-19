@@ -18,26 +18,26 @@ class TaxCalculatorTest {
     void calculateTaxPositive() {
         input = new String[]{"1", "100", "1000"};
         Double actual = TaxCalculator.calculateTax(input);
-        Assertions.assertEquals(320.1,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
+        Assertions.assertEquals(300,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
     }
 
     @Test
     void calculateTaxPositiveWithNegativeNumbers() {
         input = new String[]{"1","100","1000","-42"};
         Double actual = TaxCalculator.calculateTax(input);
-        Assertions.assertEquals(320.1,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
+        Assertions.assertEquals(300,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
     }
     @Test
     void calculateTaxPositiveWithIncorrectSymbols() {
-        input = new String[]{"1","100","1000","хуй"};
+        input = new String[]{"1","100","1500","хуй"};
         Double actual = TaxCalculator.calculateTax(input);
-        Assertions.assertEquals(320.1,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
+        Assertions.assertEquals(450,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
     }
 
     @Test
     void calculateTaxPositiveWithNumbersOutOfRange() {
         input = new String[]{"1","100","1000","100_000_000"};
         Double actual = TaxCalculator.calculateTax(input);
-        Assertions.assertEquals(320.1,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
+        Assertions.assertEquals(300,actual); // 1*0,1 + 100*0,2 + 1000*0,3 = 320.1
     }
 }

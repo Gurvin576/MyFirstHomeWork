@@ -15,9 +15,7 @@ public class PhoneBook {
 
         initDB();
 
-        while (!in.nextLine().equals("exit")) {
-            System.out.println("Спасибо что воспользовались нашим справочником! ");
-
+        do {
             System.out.print("Для поиcка по Имени введите 1, по номеру 2, по email 3, по всем полям 4: \n");
             String searchType = in.nextLine();
 
@@ -48,7 +46,7 @@ public class PhoneBook {
             }
 
             System.out.println("Введите 'exit' чтобы выйти или продолжите поиск");
-        }
+        } while (!in.nextLine().equals("exit"));
         System.out.println("Спасибо что воспользовались нашим справочником! ");
     }
 }
